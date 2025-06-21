@@ -37,18 +37,26 @@ export default function FaceID() {
     };
 
     const startVideo = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-          setIsLoading(false);
-        }
-      } catch (err) {
-        console.error("Kamera ochilmadi:", err);
-        setIsLoading(false);
-      }
-    };
+			try {
+				const stream = await navigator.mediaDevices.getUserMedia({
+					video: {
+						facingMode: 'user', // Mobilda old kamera uchun
+					},
+					audio: false,
+				})
 
+				if (videoRef.current) {
+					videoRef.current.srcObject = stream
+					await videoRef.current.play() // Qo‘shimcha kafolat
+					setIsLoading(false)
+				}
+			} catch (err) {
+				console.error('📵 Kamera ochilmadi:', err)
+				alert('Kameraga ruxsat berilmadi yoki mavjud emas.')
+				setIsLoading(false)
+			}
+		}
+    
     loadModels();
   }, []);
 
