@@ -13,18 +13,18 @@ export default function SuccessPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowConfetti(false);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-green-900 p-4 relative overflow-hidden">
+    <div className="h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-green-900 p-4 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000" />
+        <div className="absolute top-40 left-40 w-80 h-80 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
       </div>
 
       {/* Confetti Effect */}
@@ -54,7 +54,7 @@ export default function SuccessPage() {
               <div className="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full shadow-2xl animate-pulse">
                 <CheckCircle className="w-16 h-16 text-white" />
               </div>
-              <div className="absolute inset-0 w-32 h-32 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full animate-ping opacity-20 mx-auto"></div>
+              <div className="absolute inset-0 w-32 h-32 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full animate-ping opacity-20 mx-auto" />
             </div>
 
             {/* Success Message */}
@@ -62,7 +62,7 @@ export default function SuccessPage() {
               <h1 className="text-6xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 bg-clip-text text-transparent">
                 Muvaffaqiyat!
               </h1>
-              <p className="text-2xl text-white font-medium">Yuz tanish 100% muvaffaqiyatli o&APOS;tkaziltdi</p>
+              <p className="text-2xl text-white font-medium">Yuz tanish 100% muvaffaqiyatli o&apos;tkaziltdi</p>
               <p className="text-white/70 text-lg">Sizning shaxsingiz tasdiqlandi va tizimga kirish huquqi berildi</p>
             </div>
 
@@ -99,7 +99,7 @@ export default function SuccessPage() {
                 variant="outline"
                 className="border-white/30 text-white hover:bg-white/10 font-bold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                Dashboard ga o&APOS;tish
+                Dashboard ga o&apos;tish
               </Button>
             </div>
           </CardContent>
